@@ -1,0 +1,47 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: luasrc/view/wolplus/index.htm:14
+msgid "&"
+msgstr ""
+
+#: luasrc/model/cbi/wolplus.lua:27
+msgid "Awake"
+msgstr ""
+
+#: root/usr/share/rpcd/acl.d/luci-app-wolplus.json:3
+msgid "Grant UCI access for luci-app-wolplus"
+msgstr ""
+
+#: luasrc/model/cbi/wolplus.lua:6
+msgid "Host Clients"
+msgstr ""
+
+#: luasrc/model/cbi/wolplus.lua:14
+msgid "MAC Address"
+msgstr ""
+
+#: luasrc/model/cbi/wolplus.lua:11
+msgid "Name"
+msgstr ""
+
+#: luasrc/model/cbi/wolplus.lua:18
+msgid "Network Interface"
+msgstr ""
+
+#: luasrc/view/wolplus/index.htm:13
+msgid "Please [Save & Apply] your changes first"
+msgstr ""
+
+#: luasrc/model/cbi/wolplus.lua:26
+msgid "Wake Up Host"
+msgstr ""
+
+#: luasrc/model/cbi/wolplus.lua:4 luasrc/controller/wolplus.lua:8
+msgid "Wake on LAN +"
+msgstr ""
+
+#: luasrc/model/cbi/wolplus.lua:4
+msgid ""
+"Wake on LAN is a mechanism to remotely boot computers in the local network."
+msgstr ""
