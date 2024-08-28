@@ -10,6 +10,6 @@ LUCI_DEPENDS:=+appfilter +luci-compat
 
 PKG_VERSION:=5.0.2
 
-include ../../luci.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
