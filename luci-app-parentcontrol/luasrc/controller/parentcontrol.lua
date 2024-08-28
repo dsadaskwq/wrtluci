@@ -1,16 +1,15 @@
 module("luci.controller.parentcontrol", package.seeall)
 
-function index()
+function index()    
     if not nixio.fs.access("/etc/config/parentcontrol") then return end
 
-        entry({"admin", "control"}, firstchild(), "Control", 44).dependent = false
-	local e = entry({"admin","control","parentcontrol"},firstchild(),_("Parent Control"),2)
-	e.dependent=false
-	e.acl_depends = { "luci-app-parentcontrol" }
-	entry({"admin","control","parentcontrol","time"},cbi("parentcontrol/time"),_("Time Control"),1).leaf=true
-	entry({"admin", "control", "parentcontrol","weburl"}, cbi("parentcontrol/weburl"), _("Weburl Control"), 20).leaf = true
-        entry({"admin", "control", "parentcontrol","protocol"}, cbi("parentcontrol/protocol"), _("Protocol Control"), 30).leaf = true 
-	entry({"admin", "control", "parentcontrol","status"}, call("status")).leaf = true
+        local e = entry({"admin", "services", "parentcontrol"}, firstchild(), _("Parent Control"), 30)
+        e.dependent = false
+        e.acl_depends = { "luci-app-parentcontrol" }
+        entry({"admin", "services", "parentcontrol", "time"}, cbi("parentcontrol/time"), _("Time Control"), 1).leaf = true
+        entry({"admin", "services", "parentcontrol", "weburl"}, cbi("parentcontrol/weburl"), _("Weburl Control"), 20).leaf = true
+        entry({"admin", "services", "parentcontrol", "protocol"}, cbi("parentcontrol/protocol"), _("Protocol Control"), 30).leaf = true
+        entry({"admin", "services", "parentcontrol", "status"}, call("status")).leaf = true
 end
 
 function status()
