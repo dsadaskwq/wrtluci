@@ -1,10 +1,9 @@
 module("luci.controller.wolplus", package.seeall)
-local NIXIO_FS = require("nixio.fs")
 local LUCI_HTTP = require("luci.http")
 local LUCI_UCI = require("luci.model.uci").cursor()
 
 function index()
-	if not NIXIO_FS.access("/etc/config/wolplus") then return end
+	if not nixio.fs.access("/etc/config/wolplus") then return end
 	entry({"admin", "services", "wolplus"}, cbi("wolplus"), _("Wake on LAN +"), 95).dependent = true
 	entry( {"admin", "services", "wolplus", "awake"}, post("awake") ).leaf = true
 end
