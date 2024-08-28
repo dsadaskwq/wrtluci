@@ -1,6 +1,6 @@
 <% include("cbi/map") %>
 <script type="text/javascript">//<![CDATA[
-	XHR.poll(2, '<%=luci.dispatcher.build_url("admin", "control", "parentcontrol", "status")%>', null,
+	XHR.poll(2, '<%=luci.dispatcher.build_url("admin", "services", "parentcontrol", "status")%>', null,
 		function (x, result) {
 			var status = document.getElementsByClassName('parentcontrol_status')[0];
 			status.setAttribute("style", "font-weight:bold;");
